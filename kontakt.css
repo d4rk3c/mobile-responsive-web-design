@@ -1,0 +1,383 @@
+
+/* GLOBAL */
+body{
+    background:rgb(235, 235, 235);
+    margin: 0%;
+  
+}
+
+
+#showcase-header{
+    min-height: 70px;
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-columns: 1fr 1fr
+    
+}
+
+.navigate{
+    border: 1px solid white; 
+    min-height: 30px;
+    background: -moz-linear-gradient(top, rgba(28,57,142,0) 0%, rgba(28,57,142,0.8) 6%, rgba(28,57,142,1) 12%, rgba(28,57,142,1) 15%, rgba(41,137,216,1) 50%, rgba(28,57,142,1) 84%, rgba(28,57,142,1) 86%, rgba(28,57,142,0.8) 92%, rgba(28,57,142,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(28,57,142,0) 0%,rgba(28,57,142,0.8) 6%,rgba(28,57,142,1) 12%,rgba(28,57,142,1) 15%,rgba(41,137,216,1) 50%,rgba(28,57,142,1) 84%,rgba(28,57,142,1) 86%,rgba(28,57,142,0.8) 92%,rgba(28,57,142,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(28,57,142,0) 0%,rgba(28,57,142,0.8) 6%,rgba(28,57,142,1) 12%,rgba(28,57,142,1) 15%,rgba(41,137,216,1) 50%,rgba(28,57,142,1) 84%,rgba(28,57,142,1) 86%,rgba(28,57,142,0.8) 92%,rgba(28,57,142,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001c398e', endColorstr='#001c398e',GradientType=0 ); /* IE6-9 */
+}
+
+
+nav ul{
+    
+    margin-left: 20%;
+}
+nav li{
+    display: inline;
+    padding: 2vh;
+    
+}
+nav a{
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+nav a:hover{
+    color: rgb(173, 212, 235);
+   
+    
+    
+}
+nav a#openup {
+    display: none;
+}
+.footer-navigation {
+    margin-left: 20%;
+}
+.footer-navigation li{
+    display: inline;
+    padding: 2vh;
+
+}
+.footer-navigation a{
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+.footer-navigation a:hover{
+    color: rgb(173, 212, 235);
+}
+
+
+#slodes-logo{
+    margin-left: 20%;
+    padding: 2vh;
+    height: 20px;
+}
+#slodes-logo img{
+    height: 7vh;
+}
+#iveco-logo{
+    margin-right: 20%;
+    padding: 3vh;
+    text-align: end;
+}
+.active-page{
+    font-style: italic;
+    color: rgb(173, 212, 235);
+ }
+
+.main-section{
+    /* margin-top: 10vh;   */
+    width: 100%;
+    min-height: 80vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background:rgb(235, 235, 235);
+        
+    
+}
+
+.gps{
+    margin-top: 10vh;
+    margin-left: 10vh;
+    width: 80%;
+    height: 50vh;
+    border: 1px solid rgb(151, 150, 150);
+    overflow: hidden;
+    box-shadow: 2px 2px 2px rgb(151, 150, 150);
+}
+.kontakti{
+    margin-top: 5vh;
+    padding-bottom: 5vh;
+}
+.kontakti h2{
+    border-bottom: 3px solid;
+    color: rgba(34, 69, 177, 0.85);
+    padding-bottom: 0px;
+}
+.kontakti h3{
+    border-bottom: 2px solid;
+    color: rgba(34, 69, 177, 0.85);
+    padding-bottom: 0px;
+}
+
+.kontakti p{
+    padding: 0px;
+}
+.kontakti a{
+    text-decoration: inherit;
+}
+.road-help{
+    
+    width: 25vh;
+    min-height: 15vh;
+    /* border: 1px solid black; */
+    position: fixed;
+    top: 28%;
+}
+.road-help img{
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+.infoSlodes{
+    color: whitesmoke;
+    text-align: center;
+    font-size: 15px;
+}
+#copywright{
+    color: whitesmoke;
+    text-align: end;
+}
+#copywright a{
+    color: whitesmoke;
+    font-size: 13px;
+    text-decoration:inherit
+}
+
+/* ROAD HELP Content */
+
+.modal {
+    
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.6s;
+    border-radius: 2em;
+    overflow: hidden;
+
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+  
+    text-align: center;
+    padding: 2px 16px; 
+    color: white;
+    background: -moz-linear-gradient(top, rgba(28,57,142,0) 0%, rgba(28,57,142,0.8) 6%, rgba(28,57,142,1) 12%, rgba(28,57,142,1) 15%, rgba(41,137,216,1) 50%, rgba(28,57,142,1) 84%, rgba(28,57,142,1) 86%, rgba(28,57,142,0.8) 92%, rgba(28,57,142,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(28,57,142,0) 0%,rgba(28,57,142,0.8) 6%,rgba(28,57,142,1) 12%,rgba(28,57,142,1) 15%,rgba(41,137,216,1) 50%,rgba(28,57,142,1) 84%,rgba(28,57,142,1) 86%,rgba(28,57,142,0.8) 92%,rgba(28,57,142,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(28,57,142,0) 0%,rgba(28,57,142,0.8) 6%,rgba(28,57,142,1) 12%,rgba(28,57,142,1) 15%,rgba(41,137,216,1) 50%,rgba(28,57,142,1) 84%,rgba(28,57,142,1) 86%,rgba(28,57,142,0.8) 92%,rgba(28,57,142,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.modal-body {
+    padding: 2px 16px;
+    background:rgb(235, 235, 235);
+    text-align: center;
+    font-size: 13pt;
+}
+
+.modal-footer {
+    text-align: center;
+    position: relative;
+    padding: 2px 16px;
+    color: white;
+    background: -moz-linear-gradient(top, rgba(28,57,142,0) 0%, rgba(28,57,142,0.8) 6%, rgba(28,57,142,1) 12%, rgba(28,57,142,1) 15%, rgba(41,137,216,1) 50%, rgba(28,57,142,1) 84%, rgba(28,57,142,1) 86%, rgba(28,57,142,0.8) 92%, rgba(28,57,142,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(28,57,142,0) 0%,rgba(28,57,142,0.8) 6%,rgba(28,57,142,1) 12%,rgba(28,57,142,1) 15%,rgba(41,137,216,1) 50%,rgba(28,57,142,1) 84%,rgba(28,57,142,1) 86%,rgba(28,57,142,0.8) 92%,rgba(28,57,142,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(28,57,142,0) 0%,rgba(28,57,142,0.8) 6%,rgba(28,57,142,1) 12%,rgba(28,57,142,1) 15%,rgba(41,137,216,1) 50%,rgba(28,57,142,1) 84%,rgba(28,57,142,1) 86%,rgba(28,57,142,0.8) 92%,rgba(28,57,142,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.modal-footer img{
+    width: 20vh;
+    position: absolute;
+    bottom: 3vh;
+    left: 82vh;
+    
+
+}
+@media only screen and (max-width: 580px) {
+    
+
+    #showcase-header{
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr
+        
+    }
+        
+    #iveco-logo{
+        display:none;
+    }
+
+    #slodes-logo{
+    
+        margin-left:0px;
+    
+    }
+    
+    .main-section{
+     
+        margin: 0%;
+        min-height: 150vh;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+               
+        
+    }
+    .gps{
+        margin-top: 10vh;
+        margin-left:0px;
+        width: 55vh;
+        height: 50vh;
+        border: 1px solid rgb(151, 150, 150);
+        overflow: hidden;
+        box-shadow: 2px 2px 2px rgb(151, 150, 150);
+    }
+    .imggps1{
+        content: url("./img/slodesRakovica.jpg")
+    }
+    .imggps2{
+        content:url("./img/slodesDobanovci.jpg")
+    }
+      nav {
+        height: auto;
+        border-bottom: 0;
+      }
+      nav ul {
+        display: none;
+        height: auto;
+      }
+      nav li {
+        width: 100%;
+        float: left;
+        position: relative;
+      }
+    nav a {
+        padding-top: 2vh; 
+        height: 30px;
+        text-align: left;
+        width: 100%;
+        text-indent: 25px;
+        /* background: red; */ 
+        /* border-bottom: 1px solid red; */
+      }
+    nav a:hover {
+        background: -moz-linear-gradient(top, rgba(28,57,142,0) 0%, rgba(28,57,142,0.8) 6%, rgba(28,57,142,1) 12%, rgba(28,57,142,1) 15%, rgba(41,137,216,1) 50%, rgba(28,57,142,1) 84%, rgba(28,57,142,1) 86%, rgba(28,57,142,0.8) 92%, rgba(28,57,142,0) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(28,57,142,0) 0%,rgba(28,57,142,0.8) 6%,rgba(28,57,142,1) 12%,rgba(28,57,142,1) 15%,rgba(41,137,216,1) 50%,rgba(28,57,142,1) 84%,rgba(28,57,142,1) 86%,rgba(28,57,142,0.8) 92%,rgba(28,57,142,0) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(28,57,142,0) 0%,rgba(28,57,142,0.8) 6%,rgba(28,57,142,1) 12%,rgba(28,57,142,1) 15%,rgba(41,137,216,1) 50%,rgba(28,57,142,1) 84%,rgba(28,57,142,1) 86%,rgba(28,57,142,0.8) 92%,rgba(28,57,142,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001c398e', endColorstr='#001c398e',GradientType=0 ); /* IE6-9 */
+    
+      }
+    nav a#openup:after {
+        content: '|||';
+        transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        /* IE 9 */
+        -webkit-transform: rotate(-90deg);
+        /* Safari and Chrome */
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        padding-top: 2vh;
+      }
+    nav a#openup {
+        display: block;
+        background: -moz-linear-gradient(top, rgba(28,57,142,0) 0%, rgba(28,57,142,0.8) 6%, rgba(28,57,142,1) 12%, rgba(28,57,142,1) 15%, rgba(41,137,216,1) 50%, rgba(28,57,142,1) 84%, rgba(28,57,142,1) 86%, rgba(28,57,142,0.8) 92%, rgba(28,57,142,0) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(28,57,142,0) 0%,rgba(28,57,142,0.8) 6%,rgba(28,57,142,1) 12%,rgba(28,57,142,1) 15%,rgba(41,137,216,1) 50%,rgba(28,57,142,1) 84%,rgba(28,57,142,1) 86%,rgba(28,57,142,0.8) 92%,rgba(28,57,142,0) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(28,57,142,0) 0%,rgba(28,57,142,0.8) 6%,rgba(28,57,142,1) 12%,rgba(28,57,142,1) 15%,rgba(41,137,216,1) 50%,rgba(28,57,142,1) 84%,rgba(28,57,142,1) 86%,rgba(28,57,142,0.8) 92%,rgba(28,57,142,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001c398e', endColorstr='#001c398e',GradientType=0 ); /* IE6-9 */    
+        width: 100%;
+        position: relative;
+      }
+    .cf:before,
+    .cf:after {
+        content: '';
+        display: table;
+  }
+
+    .cf:after {
+        clear: both;
+    }
+
+    .cf {
+        zoom: 1;
+    }
+
+    .mobile{
+        display: block;
+
+    }
+    .footer-navigation li{
+        padding: 1vh;
+        display: inline-block;
+        text-align: center;
+    }
+    #copywright{
+        display: inline-block;
+        width: 100%;
+    
+    }
+
+            
+}
